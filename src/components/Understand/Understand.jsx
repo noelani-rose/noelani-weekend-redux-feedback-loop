@@ -8,7 +8,7 @@ function Understand () {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [understanding, setUnderstanding] = useState()
+    const [understanding, setUnderstanding] = useState(0)
 
     // const storedUnderstand = useSelector(store => store.understand)
     // console.log('store understanding is', storedUnderstand)

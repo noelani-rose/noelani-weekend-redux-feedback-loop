@@ -8,7 +8,7 @@ function Feeling () {
     const history = useHistory();
 
 
-    const [feeling, setFeeling] = useState()
+    const [feeling, setFeeling] = useState(0)
 
     // WHAT DO I DO WITH STOREDFEELING??
     const storedFeeling = useSelector(store => store.feeling)

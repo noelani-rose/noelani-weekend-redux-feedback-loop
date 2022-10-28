@@ -8,8 +8,7 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger'
 
 
-const feedback = (state = {}, action) => {
-    console.log('state is', state, 'and action is', action)
+const feedback = (state = [], action) => {
     switch (action.type){
         case 'SET_FEELING':
             return action.payload
@@ -29,13 +28,11 @@ const feedback = (state = {}, action) => {
                 action.payload
             ]
     }
-    console.log('the state of feedback is', state)
     return state
 }
 
 
 const feeling = (state = 0, action) => {
-    console.log('the new feeling state is', state)
     if (action.type === 'SET_FEELING'){
         return action.payload
     }
@@ -43,7 +40,6 @@ const feeling = (state = 0, action) => {
 }
 
 const understand = (state = 0, action) => {
-    console.log('the new understanding state is', state)
     if (action.type === 'SET_UNDERSTAND'){
         return action.payload
     }
@@ -51,7 +47,6 @@ const understand = (state = 0, action) => {
 }
 
 const support = (state = 0, action) => {
-    console.log('the new support state is', state)
     if (action.type === 'SET_SUPPORT'){
         return action.payload
     }
@@ -59,7 +54,6 @@ const support = (state = 0, action) => {
 }
 
 const comments = (state = 0, action) => {
-    console.log('the new comments state is', state)
     if (action.type === 'SET_COMMENTS'){
         return action.payload
     }

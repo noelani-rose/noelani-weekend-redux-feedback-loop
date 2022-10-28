@@ -10,8 +10,6 @@ function Comments () {
 
     const [comments, setComments] = useState('')
 
-    // const storedUnderstand = useSelector(store => store.understand)
-    // console.log('store understanding is', storedUnderstand)
 
     const handleCommentsChange = (evt) => {
         setComments(evt.target.value)
