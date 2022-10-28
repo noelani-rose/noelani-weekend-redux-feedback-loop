@@ -13,8 +13,20 @@ const feedback = (state = [], action) => {
     return state
 }
 
+
+const feeling = (state = 2, action) => {
+    console.log('the new state is', state)
+    if (action.type === 'SET_FEELING'){
+        return action.payload
+    }
+    return state
+}
+
+
+
 const storeInstance = createStore(
     combineReducers({
+        feeling,
         feedback,
     }),
     applyMiddleware(logger)

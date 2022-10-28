@@ -17,14 +17,14 @@ const router = new express.Router();
 //     })
 // })
 
-router.post('/', (req, res) => {
-    pool.query('')
+// router.post('/', (req, res) => {
+//     pool.query('')
 
-    .then((res) => {
-        res.send(res.rows) 
-    })
-    .catch((err) => {
-        console.log('error POSTing feedback', err)
-        res.sendStatus(500);
-    })
-})
+//     .then((res) => {
+//         res.send(res.rows) 
+//     })
+//     .catch((err) => {
+//         console.log('error POSTing feedback', err)
+//         res.sendStatus(500);
+//     })
+// })

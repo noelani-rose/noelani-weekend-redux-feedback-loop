@@ -4,14 +4,25 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom';
 // IMPORT COMPONENTS
+import Feeling from '../Feeling/Feeling';
+import Header from '../Header/Header';
 
 function App() {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   useEffect(() => {
 
   }, [])
+
+  // I want my home page to have a start button, 
+  // which when clicked, sends me to feeling component 
+  // const startFeedback = () => {
+  //   history.push('/feeling')  
+  // }
+
 
   // AXIOS POST
   // take in feedback as argument 
@@ -19,13 +30,24 @@ function App() {
   // then clear feedback object 
 
   return (
+    <Router>
+      <div className='App'>
 
-    <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-      </header>
-    </div>
+        <Route exact path = '/feedback'>
+          <Header />
+        <p>Let's Get Started!</p><br></br> 
+        <Link to = "/feeling">
+          <button>Start</button>
+       </Link>
+       
+        </Route>
+
+        <Route exact path = '/feeling'>
+          <Feeling />
+        </Route>
+
+      </div>
+    </Router>
   );
 }
 
