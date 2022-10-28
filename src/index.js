@@ -8,11 +8,30 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger'
 
 
-// const feedback = (state = [], action) => {
-//     // console.log('state is', state, 'and action is', action)
-//     return state
-
-// }
+const feedback = (state = {}, action) => {
+    console.log('state is', state, 'and action is', action)
+    switch (action.type){
+        case 'SET_FEELING':
+            return action.payload
+        case 'SET_UNDERSTAND':
+            return [
+                ...state,
+                action.payload
+            ];
+        case 'SET_SUPPORT':
+            return [
+                ...state,
+                action.payload
+            ];
+        case 'SET_COMMENTS':
+            return [
+                ...state,
+                action.payload
+            ]
+    }
+    console.log('the state of feedback is', state)
+    return state
+}
 
 
 const feeling = (state = 0, action) => {
@@ -52,7 +71,7 @@ const comments = (state = 0, action) => {
 const storeInstance = createStore(
     combineReducers({
         feeling,
-        // feedback,
+        feedback,
         understand,
         support,
         comments,

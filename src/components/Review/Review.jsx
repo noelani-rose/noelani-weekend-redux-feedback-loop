@@ -10,6 +10,9 @@ function Review () {
 
     const [review, setReview] = useState(0)
 
+    // grab the stuff from the redux store
+    const feedback = useSelector(store => store.feedback)
+
     // const storedUnderstand = useSelector(store => store.understand)
     // console.log('store understanding is', storedUnderstand)
 
@@ -30,15 +33,23 @@ function Review () {
     return (
         <>
             <Header />
-            <h2>Review.....</h2>
+            <h2>Review your feedback...</h2>
             <form onSubmit = {submitReview}>
-                <input 
-                type = "number"
-                onChange = {handleReviewChange}
-                value = {review}
-                >
-                </input>
-                <button type = "submit">Next</button>
+                <ul>
+                    <li>
+                        Feeling
+                    </li>
+                    <li>
+                        Understanding
+                    </li>
+                    <li>
+                        Support
+                    </li>
+                    <li>
+                        Comments
+                    </li>
+                </ul>
+                <button type = "submit">Submit!</button>
             </form>
         </>
     )

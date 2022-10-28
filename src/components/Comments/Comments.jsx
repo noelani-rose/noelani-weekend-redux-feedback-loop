@@ -23,7 +23,7 @@ function Comments () {
             type: 'SET_COMMENTS',
             payload: comments
         })
-        // history.push('/review')
+        history.push('/review')
     }
 
 
