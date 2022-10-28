@@ -21,11 +21,11 @@ function Feeling () {
 
     const submitFeeling = (evt) => {
         evt.preventDefault();
-
         dispatch({
             type: 'SET_FEELING', 
             payload: feeling
         }) 
+        history.push('/understand')
     }
 
 
@@ -36,11 +36,13 @@ function Feeling () {
             <Header />
             <h2>How are you feeling today?</h2>
             <form onSubmit={submitFeeling}>
-            <input 
-            type = "number"
-            onChange = {handleFeelingChange} 
-            value = {feeling}></input>
-            <button type = "submit">Next</button>
+                <input 
+                type = "number"
+                onChange = {handleFeelingChange} 
+                value = {feeling}
+                >
+                </input>
+                <button type = "submit">Next</button>
             </form>
         </>
     )

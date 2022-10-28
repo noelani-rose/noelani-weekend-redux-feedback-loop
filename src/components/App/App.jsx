@@ -6,8 +6,13 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
 // IMPORT COMPONENTS
-import Feeling from '../Feeling/Feeling';
 import Header from '../Header/Header';
+import Feeling from '../Feeling/Feeling';
+import Understand from '../Understand/Understand';
+import Support from '../Support/Support';
+import Comments from '../Comments/Comments';
+
+
 
 function App() {
   const dispatch = useDispatch();
@@ -33,17 +38,33 @@ function App() {
     <Router>
       <div className='App'>
 
-        <Route exact path = '/feedback'>
+        <Route exact path = '/'>
           <Header />
-        <p>Let's Get Started!</p><br></br> 
-        <Link to = "/feeling">
-          <button>Start</button>
-       </Link>
-       
+          <p>Let's Get Started!</p><br></br> 
+          <Link to = "/feeling">
+            <button>
+              {/* onClick = {startFeedback} */}
+            Start</button>
+          </Link>
         </Route>
+
 
         <Route exact path = '/feeling'>
           <Feeling />
+        </Route>
+
+
+        <Route exact path = '/understand'>
+          <Understand />
+        </Route>
+
+
+        <Route exact path = '/support'>
+          <Support />
+        </Route>
+
+        <Route exact path = '/comments'>
+          <Comments />
         </Route>
 
       </div>
