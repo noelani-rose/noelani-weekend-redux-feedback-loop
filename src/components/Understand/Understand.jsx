@@ -13,7 +13,7 @@ function Understand () {
     // const storedUnderstand = useSelector(store => store.understand)
     // console.log('store understanding is', storedUnderstand)
 
-    const handleUnderStandChange = (evt) => {
+    const handleUnderstandChange = (evt) => {
         setUnderstanding(evt.target.value)
     }
 
@@ -34,7 +34,7 @@ function Understand () {
             <form onSubmit = {submitUnderstand}>
                 <input 
                 type = "number"
-                onChange = {handleUnderStandChange}
+                onChange = {handleUnderstandChange}
                 value = {understanding}
                 >
                 </input>

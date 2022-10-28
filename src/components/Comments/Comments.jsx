@@ -8,7 +8,7 @@ function Comments () {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [comments, setComments] = useState(0)
+    const [comments, setComments] = useState('')
 
     // const storedUnderstand = useSelector(store => store.understand)
     // console.log('store understanding is', storedUnderstand)
@@ -33,7 +33,8 @@ function Comments () {
             <h2>Here are some comments</h2>
             <form onSubmit = {submitComments}>
                 <input 
-                type = "number"
+                type = "text"
+                placeholder = "Comments..."
                 onChange = {handleCommentsChange}
                 value = {comments}
                 >
