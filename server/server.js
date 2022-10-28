@@ -1,5 +1,9 @@
 const express = require('express');
 const app = express();
+const feedbackRouter = require('./routes/feedback.router')
+
+
+
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
 
@@ -9,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
-
+app.use('/feedback', feedbackRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
