@@ -14,7 +14,7 @@ const feedback = (state = [], action) => {
 }
 
 
-const feeling = (state = 2, action) => {
+const feeling = (state = 0, action) => {
     console.log('the new state is', state)
     if (action.type === 'SET_FEELING'){
         return action.payload

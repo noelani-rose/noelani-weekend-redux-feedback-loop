@@ -7,8 +7,10 @@ function Feeling () {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    // const [feeling, setFeeling] = useState(0)
 
+    const [feeling, setFeeling] = useState(0)
+
+    // WHAT DO I DO WITH STOREDFEELING??
     const storedFeeling = useSelector(store => store.feeling)
     console.log('stored feeling', storedFeeling)
 
@@ -22,7 +24,7 @@ function Feeling () {
 
         dispatch({
             type: 'SET_FEELING', 
-            payload: storedFeeling
+            payload: feeling
         }) 
     }
 
@@ -36,9 +38,8 @@ function Feeling () {
             <form onSubmit={submitFeeling}>
             <input 
             type = "number"
-            onChange = {(evt) => {evt.target.value}}
-            // onChange = {(evt) => {setFeeling(evt.target.value)}}
-            value = {storedFeeling}></input>
+            onChange = {handleFeelingChange} 
+            value = {feeling}></input>
             <button type = "submit">Next</button>
             </form>
         </>
