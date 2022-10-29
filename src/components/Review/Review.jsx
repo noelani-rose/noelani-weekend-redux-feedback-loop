@@ -10,18 +10,19 @@ function Review () {
 
     const [review, setReview] = useState({feeling: 0, understanding: 0, support: 0, comments: ''})
 
-    // grab the stuff from the redux store
+    // grab the feedback stuff from the redux store
     const feedback = useSelector(store => store.feedback);
-    console.log('feeback is...', feedback)
+    // console.log('feeback is...', feedback)
+
+    // OPTION ONE
+        // - grab all four reducers
 
 
 
     // AXIOS POST TO DATABASE
     // SEND TO CONFIRMATION PAGE
     // THEN BACK TO HOME 
-    // const handleReviewChange = (evt) => {
-    //     setReview(evt.target.value)
-    // }
+
 
     const submitReview = (evt) => {
         evt.preventDefault();

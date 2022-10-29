@@ -11,6 +11,20 @@ function Comments () {
     const [comments, setComments] = useState('')
 
 
+
+    // I want to take the last four inputs all stored
+    // in individual reducers 
+    // store them into an object and dispatch them to 
+    // feedback reducer
+    // useSelect feedback reducer to review page to display
+    // then axios post them to server 
+
+
+
+
+
+
+
     const handleCommentsChange = (evt) => {
         setComments(evt.target.value)
     }

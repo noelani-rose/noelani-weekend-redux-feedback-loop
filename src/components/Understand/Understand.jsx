@@ -13,6 +13,8 @@ function Understand () {
     // const storedUnderstand = useSelector(store => store.understand)
     // console.log('store understanding is', storedUnderstand)
 
+        // need to go grab feedback from store 
+
     const handleUnderstandChange = (evt) => {
         setUnderstanding(evt.target.value)
     }
