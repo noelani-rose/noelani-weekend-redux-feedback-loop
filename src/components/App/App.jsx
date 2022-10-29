@@ -24,17 +24,13 @@ function App() {
 
   }, [])
 
-  // I want my home page to have a start button, 
-  // which when clicked, sends me to feeling component 
-  // const startFeedback = () => {
-  //   history.push('/feeling')  
-  // }
 
 
   // AXIOS POST
   // take in feedback as argument 
   // function to submit feedback and send to database
   // then clear feedback object 
+  
 
   return (
     <Router>

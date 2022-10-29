@@ -15,28 +15,28 @@ import logger from 'redux-logger'
 
 
 
-const feedback = (state = [], action) => {
-    switch (action.type){
-        case 'SET_FEELING':
-            return action.payload
-        case 'SET_UNDERSTAND':
-            return [
-                ...state,
-                action.payload
-            ];
-        case 'SET_SUPPORT':
-            return [
-                ...state,
-                action.payload
-            ];
-        case 'SET_COMMENTS':
-            return [
-                ...state,
-                action.payload
-            ]
-    }
-    return state
-}
+// const feedback = (state = [], action) => {
+//     switch (action.type){
+//         case 'SET_FEELING':
+//             return action.payload
+//         case 'SET_UNDERSTAND':
+//             return [
+//                 ...state,
+//                 action.payload
+//             ];
+//         case 'SET_SUPPORT':
+//             return [
+//                 ...state,
+//                 action.payload
+//             ];
+//         case 'SET_COMMENTS':
+//             return [
+//                 ...state,
+//                 action.payload
+//             ]
+//     }
+//     return state
+// }
 
 
 const feeling = (state = 0, action) => {
@@ -67,12 +67,14 @@ const comments = (state = 0, action) => {
     return state
 }
 
-const review = (state = [], action) => {
-    if (action.type === 'SET_REVIEW'){
-        return []
-    }
-    return state
-}
+// is this actually even doing anything? 
+// const review = (state = [], action) => {
+//     if (action.type === 'EMPTY_REVIEW'){
+//         return []
+//     }
+//     return state
+// }
+
 
 
 
@@ -83,7 +85,7 @@ const storeInstance = createStore(
         understand,
         support,
         comments,
-        review,
+        // review,
     }),
     applyMiddleware(logger)
 )

@@ -20,18 +20,19 @@ function Review () {
     // console.log('feeback is...', feedback)
 
 
-    const createReview = [{
+    const review = [{
         feeling: feeling, 
         understanding: understanding,
         support: support, 
         comments: comments
     }]
 
+    console.log('review is', review)
 
 
 
 
-    console.log('the review is', createReview)
+
 
     // OPTION ONE
         // - grab all four reducers
@@ -47,13 +48,15 @@ function Review () {
 
     const submitReview = (evt) => {
         evt.preventDefault();
-        dispatch({
-            type: 'SET_REVIEW',
-            payload: createReview
-        })
-        createReview
+        // dispatch({
+        //  is this actually even doing anything? 
+        //     type: 'EMPTY_REVIEW',
+        //     payload: createReview
+        // })
         history.push('/success')
     }
+
+    // console.log('create review after empty is ', createReview)
 
 
     return (
@@ -62,7 +65,7 @@ function Review () {
             <h2>Review your feedback...</h2>
             <form onSubmit = {submitReview}>
                 <ul>
-                    {createReview.map((reviewItem) => (
+                    {review.map((reviewItem) => (
                          <li>Feeling is: {reviewItem.feeling}
                         <li>Understanding is: {reviewItem.understanding}</li>
                         <li>Support is: {reviewItem.support}</li>
