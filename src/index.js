@@ -67,15 +67,23 @@ const comments = (state = 0, action) => {
     return state
 }
 
+const review = (state = [], action) => {
+    if (action.type === 'SET_REVIEW'){
+        return []
+    }
+    return state
+}
+
 
 
 const storeInstance = createStore(
     combineReducers({
         feeling,
-        feedback,
+        // feedback,
         understand,
         support,
         comments,
+        review,
     }),
     applyMiddleware(logger)
 )

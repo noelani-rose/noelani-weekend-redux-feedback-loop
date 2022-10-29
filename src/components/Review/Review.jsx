@@ -42,14 +42,17 @@ function Review () {
     // SEND TO CONFIRMATION PAGE
     // THEN BACK TO HOME 
 
+    // WHEN SUBMIT IS HANDLED, EMPTY REVIEW ARRAY 
+
 
     const submitReview = (evt) => {
         evt.preventDefault();
         dispatch({
             type: 'SET_REVIEW',
-            payload: review
+            payload: createReview
         })
-        history.push('/')
+        createReview
+        history.push('/success')
     }
 
 
@@ -60,10 +63,10 @@ function Review () {
             <form onSubmit = {submitReview}>
                 <ul>
                     {createReview.map((reviewItem) => (
-                         <li>{reviewItem.feeling}
-                        <li>{reviewItem.understanding}</li>
-                        <li>{reviewItem.support}</li>
-                        <li>{reviewItem.comments}</li>  
+                         <li>Feeling is: {reviewItem.feeling}
+                        <li>Understanding is: {reviewItem.understanding}</li>
+                        <li>Support is: {reviewItem.support}</li>
+                        <li>Comments are: {reviewItem.comments}</li>  
                         </li>
                     ))}
                 </ul>

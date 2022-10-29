@@ -12,6 +12,7 @@ import Understand from '../Understand/Understand';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import SuccessPage from '../SuccessPage/SuccessPage';
 
 
 
@@ -70,6 +71,10 @@ function App() {
 
         <Route exact path = '/review'>
           <Review />
+        </Route>
+
+        <Route exact path = '/success'>
+          <SuccessPage />
         </Route>
 
       </div>
