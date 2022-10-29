@@ -7,7 +7,7 @@ function Feeling () {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [feedback, setFeedback] = useState({feeling: 0, understanding: 0, support: 0, comments: ''})
+    // const [feedback, setFeedback] = useState({feeling: 0, understanding: 0, support: 0, comments: ''})
     const [feeling, setFeeling] = useState(0)
 
     // WHAT DO I DO WITH STOREDFEELING??

@@ -43,8 +43,6 @@ const feeling = (state = 0, action) => {
     if (action.type === 'SET_FEELING'){
         return action.payload
     }
-    console.log('state of feeling is', feeling)
-
     return state
 }
 
@@ -74,7 +72,7 @@ const comments = (state = 0, action) => {
 const storeInstance = createStore(
     combineReducers({
         feeling,
-        // feedback,
+        feedback,
         understand,
         support,
         comments,
