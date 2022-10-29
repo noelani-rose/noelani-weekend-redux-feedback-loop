@@ -28,3 +28,5 @@ const router = new express.Router();
 //         res.sendStatus(500);
 //     })
 // })
+
+module.exports = router;
