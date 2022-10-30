@@ -39,17 +39,17 @@ function Feeling () {
             <h2 className = "prompt">How are you feeling today?</h2>
             <form onSubmit={submitFeeling}>
                 <div clas = "form__group field">
-                <input 
-                className = "form__field"
-                type = "number"
-                min = "1"
-                max = "5"
-                required
-                onChange = {handleFeelingChange} 
-                value = {feeling} />
-                <button type = "submit">
-                    Next
-                </button>
+                    <input 
+                    className = "form__field"
+                    type = "number"
+                    min = "1"
+                    max = "5"
+                    required
+                    onChange = {handleFeelingChange} 
+                    value = {feeling} />
+                    <button type = "submit">
+                        Next
+                    </button>
                 </div>
             </form>
         </>

@@ -27,16 +27,19 @@ function Comments () {
     return (
         <>
             <Header />
-            <h2>Are there any comments you want to leave?</h2>
+            <h2 className = "prompt">Are there any comments you want to leave?</h2>
             <form onSubmit = {submitComments}>
-                <input 
-                type = "text"
-                placeholder = "Comments..."
-                onChange = {handleCommentsChange}
-                value = {comments}
-                >
-                </input>
-                <button type = "submit">Next</button>
+            <div clas = "form__group field">
+                    <input 
+                    className = "form__field"
+                    type = "input"
+                    placeholder = "Comments..."
+                    onChange = {handleCommentsChange}
+                    value = {comments} />
+                    <button type = "submit">
+                        Next
+                    </button>
+                </div>
             </form>
         </>
     )

@@ -27,19 +27,21 @@ function Support () {
     return (
         <>
             <Header />
-            <h2>How well are you being supported?</h2>
+            <h2 className = "prompt">How well are you being supported?</h2>
             <form onSubmit = {submitSupport}>
-                <input 
-                type = "number"
-                min = "1"
-                max = "5"
-                onChange = {handleSupportChange}
-                value = {support}
-                >
-                </input>
-                <button type = "submit">
-                    Next
-                </button>
+                <div clas = "form__group field">
+                    <input 
+                    className = "form__field"
+                    type = "number"
+                    min = "1"
+                    max = "5"
+                    required
+                    onChange = {handleSupportChange}
+                    value = {support} />
+                    <button type = "submit">
+                        Next
+                    </button>
+                </div>
             </form>
         </>
     )

@@ -2,29 +2,43 @@ body{
   background-color: #ddecf6cc;
 }
 
+h1 {
+
+
+
+}
+
 
 .App {
   text-align: center;
 }
 
 .App-header {
+  color: rgb(162, 169, 169);
+  text-shadow: 2px 2px 4px #000000;
+  font-family: 'Martel', serif;
   background-color: #4595b7;
   opacity: 2.0;
   min-height: 70px;
   padding: 20px;
-  color: white;
   margin-bottom: 20px;
-  font-family: New Century Schoolbook, serif;
+
 }
 
 .App-title {
   font-size: 2em;
+  color: rgb(162, 169, 169);
+
 }
 
 .App-intro {
   font-size: large;
 }
 
+.prompt {
+  font-family: 'Martel', serif;
+  font-style: italic;
+}
 
 
 /* FEELINGS, UNDERSTANDING, SUPPORT, COMMENTS */
@@ -80,20 +94,6 @@ body{
   box-shadow: none;
 }
 
-/* demo */
-/* body {
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  font-size: 1.5rem;
-  background-color: #222222;
-} */
-
-
-
 
 
 /* REVIEW PAGE */
@@ -103,3 +103,12 @@ body{
 
 
 /* SUBMISSION PAGE */
+
+
+/* TODO: FIND GOOD COLOR SCHEME
+TODO: STYLE NEXT AND SUBMIT BUTTON
+TODO: FIND GOOD FONT FOR HEADER
+TODO: ADD TEXT UNDER PROMPT
+TODO: STYLE REVIEW PAGE
+TODO: STYLE SUBMISSION SUCCESS PAGE 
+ */
