@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 
-function Review () {
+function Review ({storeReview}) {
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -20,17 +20,14 @@ function Review () {
     // console.log('feeback is...', feedback)
 
 
-    const review = [{
+    const review = {
         feeling: feeling, 
         understanding: understanding,
         support: support, 
         comments: comments
-    }]
+    }
 
     console.log('review is', review)
-
-
-
 
 
 
@@ -65,13 +62,10 @@ function Review () {
             <h2>Review your feedback...</h2>
             <form onSubmit = {submitReview}>
                 <ul>
-                    {review.map((reviewItem) => (
-                         <li>Feeling is: {reviewItem.feeling}
-                        <li>Understanding is: {reviewItem.understanding}</li>
-                        <li>Support is: {reviewItem.support}</li>
-                        <li>Comments are: {reviewItem.comments}</li>  
-                        </li>
-                    ))}
+                    <li>{review.feeling}</li>
+                    <li>{review.understanding}</li>
+                    <li>{review.support}</li>
+                    <li>{review.comments}</li>
                 </ul>
                 <button type = "submit">Submit!</button>
             </form>
@@ -80,3 +74,5 @@ function Review () {
 }
 
 export default Review;
+
+

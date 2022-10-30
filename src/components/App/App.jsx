@@ -3,8 +3,8 @@ import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux'
-import { useHistory } from 'react-router-dom';
+// import { useDispatch } from 'react-redux'
+// import { useHistory } from 'react-router-dom';
 // IMPORT COMPONENTS
 import Header from '../Header/Header';
 import Feeling from '../Feeling/Feeling';
@@ -17,12 +17,28 @@ import SuccessPage from '../SuccessPage/SuccessPage';
 
 
 function App() {
-  const dispatch = useDispatch();
-  const history = useHistory();
+  // const dispatch = useDispatch();
+  // const history = useHistory();
 
   useEffect(() => {
 
   }, [])
+
+
+  const storeReview = () => {
+    axios({
+      method: 'POST', 
+      url: '/feedback', 
+      // data: 
+    })
+    .then((res) => {
+      // do i need to run anything here? 
+    })
+    .catch((err) => {
+      console.log('error posting review to server', err)
+    })
+  }
+
 
 
 
@@ -66,7 +82,7 @@ function App() {
         </Route>
 
         <Route exact path = '/review'>
-          <Review />
+          <Review storeReview = {storeReview}/>
         </Route>
 
         <Route exact path = '/success'>
