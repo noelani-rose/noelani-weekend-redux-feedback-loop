@@ -38,7 +38,7 @@ function Support () {
                     required
                     onChange = {handleSupportChange}
                     value = {support} />
-                    <button type = "submit">
+                    <button className = "nextBtn" type = "submit">
                         Next
                     </button>
                 </div>

@@ -2,13 +2,6 @@ body{
   background-color: #ddecf6cc;
 }
 
-h1 {
-
-
-
-}
-
-
 .App {
   text-align: center;
 }
@@ -26,9 +19,9 @@ h1 {
 }
 
 .App-title {
-  font-size: 2em;
-  color: rgb(162, 169, 169);
-
+  font-size: 2.3em;
+  letter-spacing: .1rem;
+  color: rgb(200 204 204);
 }
 
 .App-intro {
@@ -94,7 +87,86 @@ h1 {
   box-shadow: none;
 }
 
+/* BUTTONS */
+/* .nextBtn {
+  display: inline-block ;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#FFFFFF;
+  text-align:center;
+  transition: all 0.2s;
+  }
+  .nextBtn:hover{
+  color:#000000;
+  background-color:#FFFFFF;
+  }
+  @media all and (max-width:30em){
+  .nextBtn{
+  display:block;
+  margin:0.4em auto;
+  }
+  } */
 
+  
+.nextBtn {
+  background-color: #f5e7e5;
+  margin-left: 2em;
+  border: 2px solid 111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 42px;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  }
+  
+  .nextBtn:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 42px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+  }
+  
+  .nextBtn:hover:after {
+    transform: translate(0, 0);
+  }
+  
+  .nextBtn:active {
+    background-color: #ffdeda;
+    outline: 0;
+  }
+  
+  .nextBtn:hover {
+    outline: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .nextBtn {
+      padding: 0 40px;
+    }
+  }
+  
 
 /* REVIEW PAGE */
 

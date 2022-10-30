@@ -47,7 +47,7 @@ function Feeling () {
                     required
                     onChange = {handleFeelingChange} 
                     value = {feeling} />
-                    <button type = "submit">
+                    <button href = "something" className = "nextBtn" type = "submit">
                         Next
                     </button>
                 </div>

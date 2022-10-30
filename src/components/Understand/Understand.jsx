@@ -39,7 +39,7 @@ function Understand () {
                     max = "5"
                     onChange = {handleUnderstandChange}
                     value = {understanding} />
-                    <button type = "submit">
+                    <button href = "something" className = "nextBtn" type = "submit">
                         Next
                     </button>
                 </div>

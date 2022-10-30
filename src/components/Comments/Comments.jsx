@@ -36,7 +36,7 @@ function Comments () {
                     placeholder = "Comments..."
                     onChange = {handleCommentsChange}
                     value = {comments} />
-                    <button type = "submit">
+                    <button className = "submitBtn" type = "submit">
                         Next
                     </button>
                 </div>
