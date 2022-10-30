@@ -9,8 +9,16 @@ function Feeling () {
 
     const [feeling, setFeeling] = useState(0)
 
+    // const makeRequired = () => {
+    //     if (feeling < 1 || feeling > 5) {
+    //         alert('Please submit a number between 1 and 5')
+    //     }
+
+    // }
+
     const handleFeelingChange = (evt) => {
         setFeeling(evt.target.value)
+  
 
     }
 
@@ -21,6 +29,7 @@ function Feeling () {
             payload: feeling
         }) 
         history.push('/understand')
+        
     }
 
 
@@ -31,11 +40,16 @@ function Feeling () {
             <form onSubmit={submitFeeling}>
                 <input 
                 type = "number"
+                min = "1"
+                max = "5"
+                required
                 onChange = {handleFeelingChange} 
                 value = {feeling}
                 >
                 </input>
-                <button type = "submit">Next</button>
+                <button type = "submit">
+                    Next
+                </button>
             </form>
         </>
     )

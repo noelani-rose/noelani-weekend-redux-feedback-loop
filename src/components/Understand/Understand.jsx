@@ -32,6 +32,8 @@ function Understand () {
             <form onSubmit = {submitUnderstand}>
                 <input 
                 type = "number"
+                min = "1"
+                max = "5"
                 onChange = {handleUnderstandChange}
                 value = {understanding}
                 >

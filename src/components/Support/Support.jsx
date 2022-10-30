@@ -31,6 +31,8 @@ function Support () {
             <form onSubmit = {submitSupport}>
                 <input 
                 type = "number"
+                min = "1"
+                max = "5"
                 onChange = {handleSupportChange}
                 value = {support}
                 >

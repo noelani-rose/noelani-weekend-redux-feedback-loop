@@ -1,4 +1,5 @@
-import {useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom';
+import Header from '../Header/Header';
 
 function SuccessPage () {
     const history = useHistory();
@@ -9,6 +10,7 @@ function SuccessPage () {
 
     return (
         <>       
+            <Header />
             <p>Success! Your feedback was submitted!</p>
             <button onClick = {handleSubmit}>Back to Homepage</button> 
         </>
