@@ -7,7 +7,6 @@ function SuccessPage () {
         history.push('/')
     };
 
-
     return (
         <>       
             <p>Success! Your feedback was submitted!</p>
