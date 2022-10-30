@@ -30,7 +30,10 @@ function Understand () {
             <Header />
             <h2>How well are you understanding the content?</h2>
             <form onSubmit = {submitUnderstand}>
+            <div clas = "form__group field">
                 <input 
+                className = "form__field"
+                id = ""
                 type = "number"
                 min = "1"
                 max = "5"
@@ -41,6 +44,7 @@ function Understand () {
                 <button type = "submit">
                     Next
                 </button>
+                </div>
             </form>
         </>
     )

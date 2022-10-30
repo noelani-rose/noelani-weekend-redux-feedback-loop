@@ -36,12 +36,11 @@ function Feeling () {
     return(
         <>
             <Header />
-            <h2>How are you feeling today?</h2>
+            <h2 className = "prompt">How are you feeling today?</h2>
             <form onSubmit={submitFeeling}>
                 <div clas = "form__group field">
                 <input 
                 className = "form__field"
-                id = "name"
                 type = "number"
                 min = "1"
                 max = "5"

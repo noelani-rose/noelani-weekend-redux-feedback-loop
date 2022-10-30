@@ -1,13 +1,20 @@
+body{
+  background-color: #ddecf6cc;
+}
+
+
 .App {
   text-align: center;
 }
 
 .App-header {
-  background-color: #033076;
+  background-color: #4595b7;
+  opacity: 2.0;
   min-height: 70px;
   padding: 20px;
   color: white;
   margin-bottom: 20px;
+  font-family: New Century Schoolbook, serif;
 }
 
 .App-title {
@@ -18,18 +25,15 @@
   font-size: large;
 }
 
-h4 {
-  font-style: italic;
-}
 
 
 /* FEELINGS, UNDERSTANDING, SUPPORT, COMMENTS */
-/* .form__group {
+.form__group {
   position: relative;
   padding: 15px 0 0;
   margin-top: 10px;
   width: 50%;
-} */
+}
 
 .form__field {
   font-family: inherit;
@@ -37,10 +41,10 @@ h4 {
   border: 0;
   border-bottom: 2px solid #9b9b9b;
   outline: 0;
-  font-size: 1.2rem;
-  color: #529fa9;
+  font-size: 1.3rem;
+  color: #5fb3ce;
   padding: 7px 5px;
-  background: #f3f5f4;
+  background: rgb(226 230 234 / 50%);
   transition: border-color 0.2s;
   border-radius: 5px;
 }
@@ -48,7 +52,7 @@ h4 {
 .form__field::placeholder {
   color: transparent;
 }
-.form__field:placeholder-shown {
+.form__field:placeholder-shown ~ .form__label {
   font-size: 1.3rem;
   cursor: text;
   top: 20px;
@@ -61,7 +65,7 @@ h4 {
   border-image: linear-gradient(to right, #11998e, #38ef7d);
   border-image-slice: 1;
 }
-.form__field:focus {
+.form__field:focus ~ .form__label {
   position: absolute;
   top: 0;
   display: block;
@@ -71,7 +75,22 @@ h4 {
   font-weight: 700;
 }
 
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
 
+/* demo */
+/* body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background-color: #222222;
+} */
 
 
 
