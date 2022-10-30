@@ -21,12 +21,6 @@ function App() {
 // TODO: Alert user when submission was successful 
 
 
-
-  // useEffect(() => {
-
-  // }, []);
-
-
   const storeReview = (review) => {
     axios({
       method: 'POST', 

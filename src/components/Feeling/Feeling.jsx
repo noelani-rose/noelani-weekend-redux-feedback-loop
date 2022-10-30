@@ -38,18 +38,20 @@ function Feeling () {
             <Header />
             <h2>How are you feeling today?</h2>
             <form onSubmit={submitFeeling}>
+                <div clas = "form__group field">
                 <input 
+                className = "form__field"
+                id = "name"
                 type = "number"
                 min = "1"
                 max = "5"
                 required
                 onChange = {handleFeelingChange} 
-                value = {feeling}
-                >
-                </input>
+                value = {feeling} />
                 <button type = "submit">
                     Next
                 </button>
+                </div>
             </form>
         </>
     )
