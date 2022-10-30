@@ -14,30 +14,29 @@ import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import SuccessPage from '../SuccessPage/SuccessPage';
 
-
-
 function App() {
   // const dispatch = useDispatch();
   // const history = useHistory();
 
   useEffect(() => {
 
-  }, [])
+  }, []);
 
 
-  const storeReview = () => {
+  const storeReview = (review) => {
     axios({
       method: 'POST', 
       url: '/feedback', 
-      // data: 
+      data: review 
     })
     .then((res) => {
+      console.log(res);
       // do i need to run anything here? 
     })
     .catch((err) => {
-      console.log('error posting review to server', err)
-    })
-  }
+      console.log('error posting review to server', err);
+    });
+  };
 
 
 

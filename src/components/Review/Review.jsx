@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 
 
 function Review ({storeReview}) {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const history = useHistory();
 
     // const [review, setReview] = useState({feeling: 0, understanding: 0, support: 0, comments: ''})
@@ -45,6 +45,8 @@ function Review ({storeReview}) {
 
     const submitReview = (evt) => {
         evt.preventDefault();
+
+        storeReview(review)
         // dispatch({
         //  is this actually even doing anything? 
         //     type: 'EMPTY_REVIEW',
