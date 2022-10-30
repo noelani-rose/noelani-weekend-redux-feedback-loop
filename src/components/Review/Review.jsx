@@ -1,7 +1,7 @@
 import Header from "../Header/Header";
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
+import Swal from "sweetalert2";
 
 function Review ({storeReview}) {
     const history = useHistory();
@@ -24,8 +24,17 @@ function Review ({storeReview}) {
 
     const submitReview = (evt) => {
         evt.preventDefault();
-        storeReview(review)
-        history.push('/success')
+        storeReview(review);
+        Swal.fire({
+            position: 'center', 
+            icon: 'success', 
+            title: 'Your feedback has been saved!',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        .then(() => {
+            history.push('/success')
+        })
     }
 
     return (

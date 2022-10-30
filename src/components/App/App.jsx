@@ -15,9 +15,9 @@ import SuccessPage from '../SuccessPage/SuccessPage';
 function App() {
 
 
-// TODO: Make min input 1, max input 5 for feelings, understanding, and support
-// TODO: Make inputs required for all but comments 
-// TODO: Alert user when they left input empty 
+// TODO: Make min input 1, max input 5 for feelings, understanding, and support [✅]
+// TODO: Make inputs required for all but comments [✅]
+// TODO: Alert user when they left input empty [✅]
 // TODO: Alert user when submission was successful 
 
 
