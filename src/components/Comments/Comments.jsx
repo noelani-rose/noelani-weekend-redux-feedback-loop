@@ -1,28 +1,13 @@
 import Header from "../Header/Header";
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 
 function Comments () {
     const dispatch = useDispatch();
     const history = useHistory();
-
     const [comments, setComments] = useState('')
-
-
-
-    // I want to take the last four inputs all stored
-    // in individual reducers 
-    // store them into an object and dispatch them to 
-    // feedback reducer
-    // useSelect feedback reducer to review page to display
-    // then axios post them to server 
-
-
-
-
-
 
 
     const handleCommentsChange = (evt) => {
@@ -42,17 +27,24 @@ function Comments () {
     return (
         <>
             <Header />
-            <h2>Here are some comments</h2>
+            <div className="inputContainer">
+                <div className="inputContent">
+            <h2 className = "prompt">Are there any comments you would like to include?</h2>
             <form onSubmit = {submitComments}>
-                <input 
-                type = "text"
-                placeholder = "Comments..."
-                onChange = {handleCommentsChange}
-                value = {comments}
-                >
-                </input>
-                <button type = "submit">Next</button>
+            <div clas = "form__group field">
+                    <input 
+                    className = "form__field commentsInput"
+                    type = "input"
+                    placeholder = "Comments..."
+                    onChange = {handleCommentsChange}
+                    value = {comments} />
+                    <button className = "nextBtn" type = "submit">
+                        Next
+                    </button>
+                </div>
             </form>
+            </div>
+            </div>
         </>
     )
 }

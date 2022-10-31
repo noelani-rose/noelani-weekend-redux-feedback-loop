@@ -1,6 +1,6 @@
 import Header from "../Header/Header";
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 
@@ -9,9 +9,6 @@ function Support () {
     const history = useHistory();
 
     const [support, setSupport] = useState(0)
-
-    // const storedUnderstand = useSelector(store => store.understand)
-    // console.log('store understanding is', storedUnderstand)
 
     const handleSupportChange = (evt) => {
         setSupport(evt.target.value)
@@ -29,17 +26,28 @@ function Support () {
 
     return (
         <>
-            <Header />
-            <h2>Do you feel supported?!</h2>
+            <Header />            
+            <div className="inputContainer">
+            <div className="inputContent">
+            <h2 className = "prompt">On a scale from 1 to 5,<br></br>
+            how well do you feel you're being supported?</h2>
             <form onSubmit = {submitSupport}>
-                <input 
-                type = "number"
-                onChange = {handleSupportChange}
-                value = {support}
-                >
-                </input>
-                <button type = "submit">Next</button>
+                <div clas = "form__group field">
+                    <input 
+                    className = "form__field"
+                    type = "number"
+                    min = "1"
+                    max = "5"
+                    required
+                    onChange = {handleSupportChange}
+                    value = {support} />
+                    <button className = "nextBtn" type = "submit">
+                        Next
+                    </button>
+                </div>
             </form>
+            </div>
+            </div>
         </>
     )
 }

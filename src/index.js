@@ -8,36 +8,6 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger'
 
 
-// create a feedback reducer that 
-// const feedback = (state = [], action) => {
-    //
-// }
-
-
-
-// const feedback = (state = [], action) => {
-//     switch (action.type){
-//         case 'SET_FEELING':
-//             return action.payload
-//         case 'SET_UNDERSTAND':
-//             return [
-//                 ...state,
-//                 action.payload
-//             ];
-//         case 'SET_SUPPORT':
-//             return [
-//                 ...state,
-//                 action.payload
-//             ];
-//         case 'SET_COMMENTS':
-//             return [
-//                 ...state,
-//                 action.payload
-//             ]
-//     }
-//     return state
-// }
-
 
 const feeling = (state = 0, action) => {
     if (action.type === 'SET_FEELING'){
@@ -66,16 +36,6 @@ const comments = (state = 0, action) => {
     }
     return state
 }
-
-// is this actually even doing anything? 
-// const review = (state = [], action) => {
-//     if (action.type === 'EMPTY_REVIEW'){
-//         return []
-//     }
-//     return state
-// }
-
-
 
 
 const storeInstance = createStore(

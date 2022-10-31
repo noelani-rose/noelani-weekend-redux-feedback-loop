@@ -1,6 +1,6 @@
 import Header from "../Header/Header";
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 
@@ -10,10 +10,6 @@ function Understand () {
 
     const [understanding, setUnderstanding] = useState(0)
 
-    // const storedUnderstand = useSelector(store => store.understand)
-    // console.log('store understanding is', storedUnderstand)
-
-        // need to go grab feedback from store 
 
     const handleUnderstandChange = (evt) => {
         setUnderstanding(evt.target.value)
@@ -32,16 +28,27 @@ function Understand () {
     return (
         <>
             <Header />
-            <h2>Do you understand?!</h2>
+            <div className="inputContainer">
+            <div className="inputContent">
+            <h2 className = "prompt">On a scale from 1 to 5,<br></br>
+            how well are you understanding the content?</h2>
             <form onSubmit = {submitUnderstand}>
-                <input 
-                type = "number"
-                onChange = {handleUnderstandChange}
-                value = {understanding}
-                >
-                </input>
-                <button type = "submit">Next</button>
+            <div clas = "form__group field">
+                    <input 
+                    className = "form__field"
+                    id = ""
+                    type = "number"
+                    min = "1"
+                    max = "5"
+                    onChange = {handleUnderstandChange}
+                    value = {understanding} />
+                    <button href = "something" className = "nextBtn" type = "submit">
+                        Next
+                    </button>
+                </div>
             </form>
+            </div>
+            </div>
         </>
     )
 }
