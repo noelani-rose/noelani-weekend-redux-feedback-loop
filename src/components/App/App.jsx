@@ -2,8 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-// import { useEffect } from 'react';
-
 import Header from '../Header/Header';
 import Feeling from '../Feeling/Feeling';
 import Understand from '../Understand/Understand';
@@ -14,13 +12,7 @@ import SuccessPage from '../SuccessPage/SuccessPage';
 
 function App() {
 
-
-// TODO: Make min input 1, max input 5 for feelings, understanding, and support [✅]
-// TODO: Make inputs required for all but comments [✅]
-// TODO: Alert user when they left input empty [✅]
-// TODO: Alert user when submission was successful 
-
-
+  // axios request to post incoming data(review) to server
   const storeReview = (review) => {
     axios({
       method: 'POST', 
@@ -39,6 +31,7 @@ function App() {
   return (
     <Router>
       <head>
+        {/* just experimentin with fonts */}
 	      <link href="styles.css" rel="stylesheet" />
 	      <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
       </head>
@@ -47,7 +40,7 @@ function App() {
 
         <Route exact path = '/'>
           <Header />
-          <p id = "start">Let's get started!</p><br></br> 
+          <p id = "start">Let's get started!</p>
           <Link to = "/feeling">
             <button className = "startBtn">
               Start
@@ -71,6 +64,7 @@ function App() {
           <Comments />
         </Route>
 
+        {/* sending storeReview over to review page via props */}
         <Route exact path = '/review'>
           <Review storeReview = {storeReview}/>
         </Route>

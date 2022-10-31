@@ -8,6 +8,9 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger'
 
 
+// create four seperate reducers for each incoming 
+// dispatch with respective action type
+
 
 const feeling = (state = 0, action) => {
     if (action.type === 'SET_FEELING'){
@@ -41,11 +44,9 @@ const comments = (state = 0, action) => {
 const storeInstance = createStore(
     combineReducers({
         feeling,
-        // feedback,
         understand,
         support,
         comments,
-        // review,
     }),
     applyMiddleware(logger)
 )
