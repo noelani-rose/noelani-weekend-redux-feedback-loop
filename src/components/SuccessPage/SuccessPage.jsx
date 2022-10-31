@@ -11,8 +11,8 @@ function SuccessPage () {
     return (
         <>       
             <Header />
-            <p>Success! Your feedback was submitted!</p>
-            <button onClick = {handleSubmit}>Back to Homepage</button> 
+            <div className = 'success'>Your feedback has been submitted and saved!</div>
+            <button className = "homeBtn" onClick = {handleSubmit}>Back to Homepage</button> 
         </>
     )
 }

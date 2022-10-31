@@ -40,15 +40,15 @@ function Review ({storeReview}) {
     return (
         <>
             <Header />
-            <h2>Review your feedback...</h2>
-            <form onSubmit = {submitReview}>
-                <ul>
-                    <li>Feelings: {review.feeling}</li>
-                    <li>Understanding: {review.understanding}</li>
-                    <li>Support: {review.support}</li>
-                    <li>Comments: {review.comments}</li>
-                </ul>
-                <button type = "submit">Submit!</button>
+            <h2 className = "prompt reviewFeedback">Review your feedback...</h2>
+            <form className = "reviewForm" onSubmit = {submitReview}>
+                <div className = "review">
+                <p>Feelings: {review.feeling}</p>
+                <p>Understanding: {review.understanding}</p>
+                <p>Support: {review.support}</p>
+                <p>Comments: {review.comments}</p>
+                </div>
+                <button className = "submitBtn" type = "submit">Submit</button>
             </form>
         </>
     )

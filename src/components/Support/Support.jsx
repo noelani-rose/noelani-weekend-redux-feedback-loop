@@ -26,8 +26,11 @@ function Support () {
 
     return (
         <>
-            <Header />
-            <h2 className = "prompt">How well are you being supported?</h2>
+            <Header />            
+            <div className="inputContainer">
+            <div className="inputContent">
+            <h2 className = "prompt">On a scale from 1 to 5,<br></br>
+            how well do you feel you're being supported?</h2>
             <form onSubmit = {submitSupport}>
                 <div clas = "form__group field">
                     <input 
@@ -43,6 +46,8 @@ function Support () {
                     </button>
                 </div>
             </form>
+            </div>
+            </div>
         </>
     )
 }

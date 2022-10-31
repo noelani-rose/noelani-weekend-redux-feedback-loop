@@ -28,7 +28,10 @@ function Understand () {
     return (
         <>
             <Header />
-            <h2 className = "prompt">How well are you understanding the content?</h2>
+            <div className="inputContainer">
+            <div className="inputContent">
+            <h2 className = "prompt">On a scale from 1 to 5,<br></br>
+            how well are you understanding the content?</h2>
             <form onSubmit = {submitUnderstand}>
             <div clas = "form__group field">
                     <input 
@@ -44,6 +47,8 @@ function Understand () {
                     </button>
                 </div>
             </form>
+            </div>
+            </div>
         </>
     )
 }

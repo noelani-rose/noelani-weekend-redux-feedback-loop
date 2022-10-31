@@ -36,7 +36,10 @@ function Feeling () {
     return(
         <>
             <Header />
-            <h2 className = "prompt">How are you feeling today?</h2>
+            <div className="inputContainer">
+            <div className="inputContent">
+            <h2 className = "prompt">On a scale from 1 to 5,<br></br>how are you feeling today?</h2>
+            <p></p>
             <form onSubmit={submitFeeling}>
                 <div clas = "form__group field">
                     <input 
@@ -52,6 +55,8 @@ function Feeling () {
                     </button>
                 </div>
             </form>
+            </div>
+            </div>
         </>
     )
 }

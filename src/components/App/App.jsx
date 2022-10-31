@@ -42,14 +42,14 @@ function App() {
 	      <link href="styles.css" rel="stylesheet" />
 	      <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
       </head>
-      
+
       <div className='App'>
 
         <Route exact path = '/'>
           <Header />
-          <p>Let's Get Started!</p><br></br> 
+          <p id = "start">Let's get started!</p><br></br> 
           <Link to = "/feeling">
-            <button>
+            <button className = "startBtn">
               Start
             </button>
           </Link>
